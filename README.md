@@ -1,19 +1,17 @@
 # Tcr
 
-** Test && Commit || Revert **
+**Test && Commit || Revert**
 
 ## Installation
 
 git clone https://github.com/mwindholtz/test-commit-revert
 
-```
 # In one terminal window run
-script/limbo.sh
+`script/limbo.sh`
 
 # then in another window run 
-mix tcr
+`mix tcr`
 
-```
 
 References
 [Kent Beck](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864)
