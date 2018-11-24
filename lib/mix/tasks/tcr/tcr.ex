@@ -1,12 +1,11 @@
 defmodule Mix.Tasks.Tcr.Tcr do
   @moduledoc """
-  script/limbo.sh
-  mix tcr
+  mix tcr.tcr
   """
   use Mix.Task
 
   @preferred_cli_env :test
-  @shortdoc "Runs Tcr"
+  @shortdoc "Runs Test-Commit-Revert Loop"
   def run(args) do
     IO.inspect("RUNNING TESTS")
     System.put_env("MIX_ENV", "test")

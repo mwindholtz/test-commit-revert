@@ -1,11 +1,11 @@
-defmodule Mix.Tasks.Tcr.PushPull do
+defmodule Mix.Tasks.Tcr.PullPush do
   @moduledoc """
-  mix tcr.limbo
+  mix tcr.pull_push
   """
   use Mix.Task
 
   @preferred_cli_env :test
-  @shortdoc "Runs Tcr Push/Pull Loop"
+  @shortdoc "Runs Git Pull/Push Loop"
   def run(args) do
     IO.inspect("RUNNING PUSH PULL")
     push_pull()
