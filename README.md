@@ -1,6 +1,6 @@
 # Tcr
 
-**Test && Commit || Revert**
+Experiment in **Test && Commit || Revert**
 
 ## Installation
 
