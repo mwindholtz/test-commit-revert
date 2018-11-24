@@ -1,21 +1,22 @@
 # Tcr
 
-**TODO: Add description**
+** Test && Commit || Revert **
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `tcr` to your list of dependencies in `mix.exs`:
+git clone https://github.com/mwindholtz/test-commit-revert
 
-```elixir
-def deps do
-  [
-    {:tcr, "~> 0.1.0"}
-  ]
-end
+```
+# In one terminal window run
+script/limbo.sh
+
+# then in another window run 
+mix tcr
+
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/tcr](https://hexdocs.pm/tcr).
+References
+[Kent Beck](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864)
+[JB Rainsberger](https://blog.thecodewhisperer.com/permalink/the-worlds-shortest-article-on-test-and-commit-otherwise-revert)
+[Thomas Deniffel](https://medium.com/@tdeniffel/tcr-test-commit-revert-a-test-alternative-to-tdd-6e6b03c22bec)
 
