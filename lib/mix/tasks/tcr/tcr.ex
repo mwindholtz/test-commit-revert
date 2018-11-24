@@ -1,4 +1,4 @@
-defmodule Mix.Tasks.Tcr do
+defmodule Mix.Tasks.Tcr.Tcr do
   @moduledoc """
   script/limbo.sh
   mix tcr
