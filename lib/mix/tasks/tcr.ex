@@ -18,6 +18,7 @@ defmodule Mix.Tasks.Tcr do
 
       _ ->
         IO.inspect("git reset — hard")
+        System.cmd("git", ~w[reset - hard])
     end
   end
 end
