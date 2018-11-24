@@ -1,6 +1,7 @@
 defmodule Mix.Tasks.Tcr do
   @moduledoc """
   MIX_ENV=test mix tcr
+  && git commit -am working || git reset — hard
   """
   use Mix.Task
 
@@ -11,8 +12,12 @@ defmodule Mix.Tasks.Tcr do
     System.put_env("MIX_ENV", "test")
 
     case Mix.Tasks.Test.run(~w|test args|) do
-      :ok -> IO.inspect("commit")
-      _ -> IO.inspect("revert")
+      :ok ->
+        IO.inspect("git commit -am working")
+        System.cmd("git", ~w[commit -am working])
+
+      _ ->
+        IO.inspect("git reset — hard")
     end
   end
 end

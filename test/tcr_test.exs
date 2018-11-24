@@ -4,5 +4,6 @@ defmodule TcrTest do
 
   test "greets the world" do
     assert Tcr.hello() == :world
+    # refute "BANG"
   end
 end
