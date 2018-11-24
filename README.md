@@ -7,10 +7,12 @@ Experiment in **Test && Commit || Revert**
 git clone https://github.com/mwindholtz/test-commit-revert
 
 ### In one terminal window run
-`script/limbo.sh`
+`mix tcr.pull_push`
+This will push commits to the trunk whenever they are ready
 
 ### Then in another window run 
-`mix tcr`
+`mix tcr.tcr`
+This will run tests and save commits if test passes, and revert if it does not.
 
 
 #### References
