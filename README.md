@@ -6,10 +6,10 @@ Experiment in **Test && Commit || Revert**
 
 git clone https://github.com/mwindholtz/test-commit-revert
 
-# In one terminal window run
+### In one terminal window run
 `script/limbo.sh`
 
-# then in another window run 
+### then in another window run 
 `mix tcr`
 
 
