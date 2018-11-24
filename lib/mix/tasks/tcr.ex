@@ -1,9 +1,6 @@
 defmodule Mix.Tasks.Tcr do
   @moduledoc """
-  MIX_ENV=test mix tcr
-  && git commit -am working || git reset — hard
-
-  script/limbo.sh &
+  script/limbo.sh
   mix tcr
   """
   use Mix.Task
