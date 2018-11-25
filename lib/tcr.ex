@@ -26,7 +26,7 @@ defmodule Tcr do
     case parsed do
       {_, ["help"], _} -> :help
       {[help: true], _, _} -> :help
-      args -> :invalid
+      _args -> :invalid
     end
   end
 
