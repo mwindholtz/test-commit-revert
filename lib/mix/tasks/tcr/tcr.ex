@@ -3,6 +3,7 @@ defmodule Mix.Tasks.Tcr.Tcr do
   mix tcr.tcr
   """
   use Mix.Task
+  require Logger
 
   @preferred_cli_env :test
   @shortdoc "Runs Test-Commit-Revert Loop"
@@ -13,7 +14,7 @@ defmodule Mix.Tasks.Tcr.Tcr do
 
     case Mix.Tasks.Test.run(~w|test #{args_string}|) do
       :ok ->
-        IO.inspect("git commit -am working_tcr")
+        Logger.info("git commit -am working_tcr")
         System.cmd("git", ~w[commit -am working_tcr])
 
       _ ->
