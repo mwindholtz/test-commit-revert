@@ -26,7 +26,7 @@ defmodule Tcr do
     case parsed do
       {_, ["help"], _} -> :help
       {[help: true], _, _} -> :help
-      args -> IO.inspect(args, label: "UNCAUGHT")
+      args -> :help
     end
   end
 

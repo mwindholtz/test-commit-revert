@@ -38,5 +38,13 @@ defmodule TcrTest do
 
       capture_io(fn_under_test)
     end
+
+    test "invalid" do
+      fn_under_test = fn ->
+        assert :help == Tcr.parse_args(~w[invalid])
+      end
+
+      capture_io(fn_under_test)
+    end
   end
 end
