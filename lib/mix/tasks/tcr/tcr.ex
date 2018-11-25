@@ -9,7 +9,7 @@ defmodule Mix.Tasks.Tcr.Tcr do
   @shortdoc "Runs Test-Commit-Revert Loop"
   def run(args) do
     args_string = List.to_string(args)
-    Logger.info("RUNNING TESTS #{args_string}")
+    Logger.error("RUNNING TESTS #{args_string}")
     System.put_env("MIX_ENV", "test")
 
     case Mix.Tasks.Test.run(~w|test #{args_string}|) do
