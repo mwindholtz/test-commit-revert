@@ -4,12 +4,14 @@ defmodule TcrTest do
 
   import ExUnit.CaptureIO
 
-  test "run" do
-    fn_under_test = fn ->
-      assert 0 == Tcr.run(~w[-h])
-    end
+  describe "run" do
+    test "-h" do
+      fn_under_test = fn ->
+        assert 0 == Tcr.run(~w[-h])
+      end
 
-    capture_io(fn_under_test)
+      capture_io(fn_under_test)
+    end
   end
 
   describe "parse_args" do
@@ -19,8 +21,14 @@ defmodule TcrTest do
       end
 
       capture_io(fn_under_test)
+    end
 
-      # refute "BANG"
+    test "--help" do
+      fn_under_test = fn ->
+        assert :help == Tcr.parse_args(~w[-h])
+      end
+
+      capture_io(fn_under_test)
     end
   end
 end
