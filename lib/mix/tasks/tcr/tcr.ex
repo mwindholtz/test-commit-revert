@@ -22,7 +22,7 @@ defmodule Mix.Tasks.Tcr.Tcr do
   end
 
   def git(args) do
-    Logger.info("git #{args}")
+    Logger.info("git #{args_string = List.to_string(args)}")
     System.cmd("git", args)
   end
 end
