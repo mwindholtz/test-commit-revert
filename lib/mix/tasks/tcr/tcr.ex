@@ -7,7 +7,7 @@ defmodule Mix.Tasks.Tcr.Tcr do
   @preferred_cli_env :test
   @shortdoc "Runs Test-Commit-Revert Loop"
   def run(args) do
-    IO.inspect("RUNNING TESTS")
+    IO.inspect("RUNNING TESTS #{inspect(args)}")
     System.put_env("MIX_ENV", "test")
 
     case Mix.Tasks.Test.run(~w|test args|) do
