@@ -11,7 +11,7 @@ defmodule Mix.Tasks.Tcr.Tcr do
     IO.inspect("RUNNING TESTS #{args_string}")
     System.put_env("MIX_ENV", "test")
 
-    case Mix.Tasks.Test.run(~w|test args|) do
+    case Mix.Tasks.Test.run(~w|test #{args_string}|) do
       :ok ->
         IO.inspect("git commit -am working")
         System.cmd("git", ~w[commit -am working])
