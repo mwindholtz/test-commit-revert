@@ -3,7 +3,8 @@ defmodule TcrTest do
   doctest Tcr
 
   test "runs the CLI" do
-    assert Tcr.cli(~w[-h something ]) == {[], [], [{"-h", "something"}]}
+    expected = {[], [], [{"-h", "something"}]}
+    assert expected == Tcr.cli(~w[-h something ])
     # refute "BANG"
   end
 end
