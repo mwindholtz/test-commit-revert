@@ -2,17 +2,25 @@ defmodule TcrTest do
   use ExUnit.Case
   doctest Tcr
 
-  @tag :capture_log
+  import ExUnit.CaptureIO
+
   test "run" do
-    expected = {[], [], [{"-h", "something"}]}
-    assert expected == Tcr.run(~w[-h something ])
+    fn_under_test = fn ->
+      assert 0 == Tcr.run(~w[-h])
+    end
+
+    capture_io(fn_under_test)
   end
 
-  @tag :capture_log
-  test "parse_args" do
-    expected = {[], [], [{"-h", "something"}]}
-    assert expected == Tcr.parse_args(~w[-h something ])
+  describe "parse_args" do
+    test "-h" do
+      fn_under_test = fn ->
+        assert :help == Tcr.parse_args(~w[-h])
+      end
 
-    # refute "BANG"
+      capture_io(fn_under_test)
+
+      # refute "BANG"
+    end
   end
 end

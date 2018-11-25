@@ -10,19 +10,34 @@ defmodule Tcr do
   def run(argv) do
     argv
     |> parse_args()
+    |> process
   end
 
   def parse_args(argv) do
     IO.puts("Arguments: #{inspect(argv)}")
-    OptionParser.parse(argv)
+
+    parsed =
+      OptionParser.parse(
+        argv,
+        switches: [help: :boolean],
+        aliases: [h: :help]
+      )
+
+    case parsed do
+      {_, ["help"], _} -> :help
+      {[help: true], _, _} -> :help
+      args -> IO.inspect(args, label: "UNCAUGHT")
+    end
   end
 
   def process(:help) do
     IO.puts("""
     usage:  mix tcr.run 
     """)
+
+    0
   end
 
-  def process(args) do
+  def process(_args) do
   end
 end
