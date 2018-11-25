@@ -2,7 +2,7 @@ defmodule TcrTest do
   use ExUnit.Case
   doctest Tcr
 
-  @tag :capture_log
+  @tag capture_log: true
   test "runs the CLI" do
     expected = {[], [], [{"-h", "something"}]}
     assert expected == Tcr.cli(~w[-h something ])
