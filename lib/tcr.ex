@@ -2,17 +2,13 @@ defmodule Tcr do
   @moduledoc """
   Documentation for Tcr.
   """
-
   @doc """
-  Hello world.
+  ## Example
 
-  ## Examples
-
-      iex> Tcr.hello
-      :world
-
+      $ mix compile; mix tcr.run -h something wonderful
   """
-  def hello do
-    :world
+  def cli(argv) do
+    IO.puts('Arguments:')
+    OptionParser.parse(argv)
   end
 end
