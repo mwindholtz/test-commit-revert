@@ -7,6 +7,6 @@ defmodule Mix.Tasks.Tcr.Run do
   @shortdoc "Runs Command Line Interface"
   def run(args) do
     IO.inspect("RUNNING CLI")
-    Tcr.cli(args)
+    Tcr.run(args)
   end
 end
