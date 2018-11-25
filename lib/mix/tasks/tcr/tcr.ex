@@ -13,8 +13,8 @@ defmodule Mix.Tasks.Tcr.Tcr do
 
     case Mix.Tasks.Test.run(~w|test #{args_string}|) do
       :ok ->
-        IO.inspect("git commit -am working")
-        System.cmd("git", ~w[commit -am working])
+        IO.inspect("git commit -am working_tcr")
+        System.cmd("git", ~w[commit -am working_tcr])
 
       _ ->
         IO.inspect("git reset — hard")
