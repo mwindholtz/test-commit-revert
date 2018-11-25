@@ -7,7 +7,7 @@ defmodule Tcr do
 
       $ mix compile; mix tcr.run -h something wonderful
   """
-  def cli(argv) do
+  def parse_args(argv) do
     IO.puts("Arguments: #{inspect(argv)}")
     OptionParser.parse(argv)
   end

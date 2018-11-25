@@ -3,9 +3,9 @@ defmodule TcrTest do
   doctest Tcr
 
   @tag :capture_log
-  test "runs the CLI" do
+  test "parse_args" do
     expected = {[], [], [{"-h", "something"}]}
-    assert expected == Tcr.cli(~w[-h something ])
+    assert expected == Tcr.parse_args(~w[-h something ])
 
     # refute "BANG"
   end
