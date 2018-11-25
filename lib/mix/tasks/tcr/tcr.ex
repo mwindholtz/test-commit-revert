@@ -22,7 +22,7 @@ defmodule Mix.Tasks.Tcr.Tcr do
   end
 
   def git(args) do
-    Logger.info("git #{Enum.join(args)}")
+    Logger.info("git #{Enum.join(args, " ")}")
     System.cmd("git", args)
   end
 end
