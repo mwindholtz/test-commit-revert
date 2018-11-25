@@ -25,7 +25,7 @@ defmodule TcrTest do
 
     test "--help" do
       fn_under_test = fn ->
-        assert :help == Tcr.parse_args(~w[-h])
+        assert :help == Tcr.parse_args(~w[--help])
       end
 
       capture_io(fn_under_test)
