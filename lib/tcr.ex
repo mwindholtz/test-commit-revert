@@ -26,13 +26,21 @@ defmodule Tcr do
     case parsed do
       {_, ["help"], _} -> :help
       {[help: true], _, _} -> :help
-      args -> :help
+      args -> :invalid
     end
   end
 
   def process(:help) do
     IO.puts("""
     usage:  mix tcr.run [ --help | -h | help]
+    """)
+
+    0
+  end
+
+  def process(:invalid) do
+    IO.puts("""
+    invalid arguments. see: mix tcr.run --help 
     """)
 
     0
