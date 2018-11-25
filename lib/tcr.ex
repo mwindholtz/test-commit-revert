@@ -32,7 +32,7 @@ defmodule Tcr do
 
   def process(:help) do
     IO.puts("""
-    usage:  mix tcr.run 
+    usage:  mix tcr.run [ --help | -h | help]
     """)
 
     0
