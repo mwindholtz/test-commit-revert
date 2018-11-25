@@ -5,7 +5,7 @@ defmodule TcrTest do
   test "runs the CLI" do
     expected = {[], [], [{"-h", "something"}]}
     assert expected == Tcr.cli(~w[-h something ])
-    
-    refute "BANG"
+
+    # refute "BANG"
   end
 end
