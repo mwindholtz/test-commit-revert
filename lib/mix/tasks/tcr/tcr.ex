@@ -14,12 +14,15 @@ defmodule Mix.Tasks.Tcr.Tcr do
 
     case Mix.Tasks.Test.run(~w|test #{args_string}|) do
       :ok ->
-        Logger.info("git commit -am working_tcr")
-        System.cmd("git", ~w[commit -am working_tcr])
+        git(~w[commit -am working_tcr])
 
       _ ->
-        Logger.info("git reset — hard")
-        System.cmd("git", ~w[reset --hard])
+        git(~w[reset --hard])
     end
+  end
+
+  def git(args) do
+    Logger.info("git #{args}")
+    System.cmd("git", args)
   end
 end
