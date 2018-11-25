@@ -10,9 +10,12 @@ git clone https://github.com/mwindholtz/test-commit-revert
 `mix tcr.pull_push`
 This will push commits to the trunk whenever they are ready
 
-### Then in another window run 
+### In another window run 
 `mix tcr.tcr`
 This will run tests and save commits if test passes, and revert if it does not.
+
+### Run the app manually 
+`mix tcr.run --help`
 
 
 #### References
