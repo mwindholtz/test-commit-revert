@@ -33,8 +33,12 @@ defmodule TcrTest do
       fn_under_test = fn ->
         assert :help == Tcr.parse_args(~w[--help])
       end
+    end
 
-      capture_io(fn_under_test)
+    test "--boom" do
+      fn_under_test = fn ->
+        assert :boom == Tcr.parse_args(~w[--boom])
+      end
     end
 
     test "help" do
