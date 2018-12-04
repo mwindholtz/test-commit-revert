@@ -52,5 +52,6 @@ defmodule TcrTest do
 
       capture_io(fn_under_test)
     end
+
   end
 end

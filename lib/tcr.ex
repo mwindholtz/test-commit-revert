@@ -25,6 +25,7 @@ defmodule Tcr do
 
     case parsed do
       {_, ["help"], _} -> :help
+      {_, ["why_would_you_do_this"], _} -> :speaker_test
       {[help: true], _, _} -> :help
       _args -> :invalid
     end
@@ -40,8 +41,14 @@ defmodule Tcr do
 
   def process(:invalid) do
     IO.puts("""
-    invalid arguments. see: mix tcr.run --help 
+    invalid arguments. see: mix tcr.run --help
     """)
+
+    0
+  end
+
+  def process(:speaker_test) do
+    System.cmd("say", ~w["speaker test"])
 
     0
   end
