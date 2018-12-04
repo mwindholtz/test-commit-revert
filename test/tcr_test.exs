@@ -15,6 +15,12 @@ defmodule TcrTest do
   end
 
   describe "parse_args" do
+    test "--version" do
+      fn_under_test = fn ->
+        assert :version == Tcr.parse_args(~w[--version])
+      end
+    end
+
     test "-h" do
       fn_under_test = fn ->
         assert :help == Tcr.parse_args(~w[-h])
