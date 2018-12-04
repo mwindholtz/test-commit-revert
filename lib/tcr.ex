@@ -19,7 +19,7 @@ defmodule Tcr do
     parsed =
       OptionParser.parse(
         argv,
-        switches: [help: :boolean],
+        switches: [help: :boolean, version: :boolean],
         aliases: [h: :help]
       )
 
@@ -27,6 +27,7 @@ defmodule Tcr do
       {_, ["help"], _} -> :help
       {_, ["why_would_you_do_this"], _} -> :speaker_test
       {[help: true], _, _} -> :help
+      {[version: true], _, _} -> :version
       {["boom"]} -> :boom
       _args -> :invalid
     end
