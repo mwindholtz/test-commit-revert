@@ -27,6 +27,7 @@ defmodule Tcr do
       {_, ["help"], _} -> :help
       {_, ["why_would_you_do_this"], _} -> :speaker_test
       {[help: true], _, _} -> :help
+      {["boom"]} -> :boom
       _args -> :invalid
     end
   end

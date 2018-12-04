@@ -14,7 +14,7 @@ defmodule Mix.Tasks.Tcr.Tcr do
 
     case Mix.Tasks.Test.run(~w|test #{args_string}|) do
       :ok ->
-        git(~w[commit -am working_tcr])
+        git(~w[commit -nam working_tcr])
 
       _ ->
         git(~w[reset --hard])
