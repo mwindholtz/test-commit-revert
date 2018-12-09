@@ -4,7 +4,10 @@ Experiment in **Test && Commit || Revert**
 
 ## Installation
 
-git clone https://github.com/mwindholtz/test-commit-revert
+Add to deps()
+```
+  {:tcr, "~> 0.1.0"}
+```
 
 ### In one terminal window run
 `mix tcr.pull_push`

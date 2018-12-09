@@ -4,10 +4,11 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-8e9bd13b7f.js
+dist/sidebar_items-39e193082b.js
 api-reference.html
 search.html
 404.html
 Mix.Tasks.Tcr.PullPush.html
 Mix.Tasks.Tcr.Test.html
+Mix.Tasks.Tcr.TestCommit.html
 index.html
