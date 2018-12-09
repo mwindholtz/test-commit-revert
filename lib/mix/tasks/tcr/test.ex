@@ -20,7 +20,7 @@ defmodule Mix.Tasks.Tcr.Test do
         git(~w[commit -am working_tcr])
 
       _ ->
-        IO.puts("Test Failed, Not commited, Not reverted")
+        IO.puts("Test Failed. Code Reverted.")
         git(~w[reset --hard])
     end
   end
