@@ -6,15 +6,20 @@ Experiment in **Test && Commit || Revert**
 
 Add to deps()
 ```
-  {:tcr, "~> 0.1.0"}
+  {:tcr, "~> 0.1.0", only: :test}
 ```
+
+then run  
+1. `mix deps.get`
+1. `mix deps.compile tcr`
+
 
 ### In one terminal window run
 `mix tcr.pull_push`
 This will push commits to the trunk whenever they are ready
 
 ### In another window run 
-`mix tcr.test`
+` MIX_ENV=test mix tcr.test_commit `
 This will run tests and save commits if test passes, and revert if it does not.
 
 

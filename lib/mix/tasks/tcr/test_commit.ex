@@ -1,7 +1,7 @@
 defmodule Mix.Tasks.Tcr.TestCommit do
   @moduledoc """
   ### In seperate terminal window run 
-  `mix tcr.test_commit`
+  ` MIX_ENV=test mix tcr.test_commit`
   This will run tests and save commits if/when the test passes, and nothing if test fails.
  
   """
