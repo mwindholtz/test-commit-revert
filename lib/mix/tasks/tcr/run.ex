@@ -1,5 +1,7 @@
 defmodule Mix.Tasks.Tcr.Run do
   @moduledoc """
+  This is the Example program under development.
+  This will probably be removed in a future version.
   mix tcr.run
   """
   use Mix.Task

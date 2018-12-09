@@ -1,6 +1,9 @@
 defmodule Mix.Tasks.Tcr.Tcr do
   @moduledoc """
-  mix tcr.tcr
+  ### In seperate terminal window run 
+  `mix tcr.tcr`
+  This will run tests and save commits if/when the test passes, and revert if test fails.
+ 
   """
   use Mix.Task
   require Logger

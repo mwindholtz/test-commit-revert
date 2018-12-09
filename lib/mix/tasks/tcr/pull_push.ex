@@ -1,6 +1,8 @@
 defmodule Mix.Tasks.Tcr.PullPush do
   @moduledoc """
-  mix tcr.pull_push
+  ### In a terminal window run
+  `mix tcr.pull_push`
+  This will push commits to the trunk whenever they are created by `mix tcr.tcr` which you can run occasionally manually in another terminal window.
   """
   use Mix.Task
 
