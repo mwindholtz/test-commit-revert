@@ -64,7 +64,42 @@ Tcr              </h1>
 
 
         <section id="moduledoc">
-<p>Documentation for Tcr.</p>
+<p>Experiment in <strong>Test &amp;&amp; Commit || Revert</strong></p>
+<h2 id="module-installation" class="section-heading">
+  <a href="#module-installation" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Installation
+</h2>
+
+<p>git clone https://github.com/mwindholtz/test-commit-revert</p>
+<h3 id="module-in-one-terminal-window-run" class="section-heading">
+  <a href="#module-in-one-terminal-window-run" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  In one terminal window run
+</h3>
+
+<p><code class="inline">mix tcr.pull_push</code>
+This will push commits to the trunk whenever they are ready</p>
+<h3 id="module-in-another-window-run" class="section-heading">
+  <a href="#module-in-another-window-run" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  In another window run
+</h3>
+
+<p><code class="inline">mix tcr.tcr</code>
+This will run tests and save commits if test passes, and revert if it does not.</p>
+<h3 id="module-run-the-app-manually" class="section-heading">
+  <a href="#module-run-the-app-manually" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Run the app manually
+</h3>
+
+<p><code class="inline">mix tcr.run --help</code></p>
+<h4>References</h4>
+<ul>
+<li><a href="https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864">Kent Beck</a>
+</li>
+<li><a href="https://blog.thecodewhisperer.com/permalink/the-worlds-shortest-article-on-test-and-commit-otherwise-revert">JB Rainsberger</a>
+</li>
+<li><a href="https://medium.com/@tdeniffel/tcr-test-commit-revert-a-test-alternative-to-tdd-6e6b03c22bec">Thomas Deniffel</a>
+</li>
+</ul>
         </section>
 
         <section id="summary" class="details-list">
