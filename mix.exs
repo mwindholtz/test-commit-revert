@@ -23,7 +23,7 @@ defmodule Tcr.MixProject do
 
   defp package() do
     [
-      files: ~w(lib  .formatter.exs mix.exs README*  LICENSE* CHANGELOG*  src),
+      files: ~w(lib  .formatter.exs mix.exs README*  LICENSE* CHANGELOG* ),
       licenses: ["Apache 2.0"],
       links: %{"GitHub" => "https://github.com/mwindholtz/test-commit-revert"}
     ]
