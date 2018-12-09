@@ -2,13 +2,13 @@ defmodule Mix.Tasks.Tcr.PullPush do
   @moduledoc """
   ### In a terminal window run
   `mix tcr.pull_push`
-  This will push commits to the trunk whenever they are created by `mix tcr.tcr` which you can run occasionally manually in another terminal window.
+  This will push commits to the trunk whenever they are created by `mix tcr.test` which you can run occasionally manually in another terminal window.
   """
   use Mix.Task
 
   @preferred_cli_env :test
   @shortdoc "Runs Git Pull/Push Loop"
-  def run(args) do
+  def run(_args) do
     IO.inspect("RUNNING PUSH PULL")
     push_pull()
   end

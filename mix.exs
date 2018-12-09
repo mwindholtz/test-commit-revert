@@ -6,6 +6,8 @@ defmodule Tcr.MixProject do
       app: :tcr,
       version: "0.1.0",
       elixir: "~> 1.6",
+            elixirc_paths: elixirc_paths(Mix.env()),
+
       start_permanent: Mix.env() == :prod,
       description: description(),
       package: package(),
@@ -27,6 +29,9 @@ defmodule Tcr.MixProject do
       links: %{"GitHub" => "https://github.com/mwindholtz/test-commit-revert"}
     ]
   end
+
+  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(_), do: ["lib"]
 
   defp description() do
     "Mix tasks to support test-commit-revert style coding"

@@ -1,6 +1,7 @@
 defmodule TcrTest do
   use ExUnit.Case
-  doctest Tcr
+
+  alias Tcr.Application, as: Tcr
 
   import ExUnit.CaptureIO
 
