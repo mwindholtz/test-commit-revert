@@ -7,6 +7,8 @@ defmodule Tcr.MixProject do
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
       deps: deps()
     ]
   end
@@ -19,11 +21,20 @@ defmodule Tcr.MixProject do
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
-  defp deps do
+  defp package() do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
+      files: ~w(lib priv .formatter.exs mix.exs README* readme* LICENSE*
+                license* CHANGELOG* changelog* src),
+      licenses: ["Apache 2.0"],
+      links: %{"GitHub" => "https://github.com/mwindholtz/test-commit-revert"}
     ]
+  end
+
+  defp description() do
+    "Mix tasks to support test-commit-revert style coding"
+  end
+
+  defp deps do
+    []
   end
 end
