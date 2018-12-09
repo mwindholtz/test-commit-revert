@@ -6,7 +6,7 @@ Experiment in **Test && Commit || Revert**
 
 Add to deps()
 ```
-  {:tcr, "~> 0.1.0", only: :test}
+  {:tcr, "~> 0.1.0" }
 ```
 
 then run  
