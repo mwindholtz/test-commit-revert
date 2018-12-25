@@ -4,10 +4,9 @@ defmodule Tcr.MixProject do
   def project do
     [
       app: :tcr,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.6",
-            elixirc_paths: elixirc_paths(Mix.env()),
-
+      elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       description: description(),
       package: package(),
@@ -39,7 +38,7 @@ defmodule Tcr.MixProject do
 
   defp deps do
     [
-      {:ex_doc, ">= 0.0.0", only: :dev} 
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 end

@@ -10,7 +10,7 @@ Experiment in **Test && Commit || Revert**
 
 Add to deps()
 ```
-  {:tcr, "~> 0.1.0" }
+  {:tcr, "~> 0.1.1" }
 ```
 
 then run  
