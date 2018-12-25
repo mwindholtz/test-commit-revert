@@ -1,9 +1,13 @@
 defmodule Mix.Tasks.Tcr.TestCommit do
   @moduledoc """
+  ## DEPRECATED. Please move to:  
+  * hex: https://hex.pm/packages/limbo
+  * git: https://github.com/mwindholtz/limbo
+
   ### In seperate terminal window run 
   ` MIX_ENV=test mix tcr.test_commit`
   This will run tests and save commits if/when the test passes, and nothing if test fails.
- 
+
   """
   use Mix.Task
   require Logger

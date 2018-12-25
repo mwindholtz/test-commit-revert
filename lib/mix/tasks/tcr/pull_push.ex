@@ -1,5 +1,9 @@
 defmodule Mix.Tasks.Tcr.PullPush do
   @moduledoc """
+  ## DEPRECATED. Please move to:  
+  * hex: https://hex.pm/packages/limbo
+  * git: https://github.com/mwindholtz/limbo
+
   ### In a terminal window run
   `mix tcr.pull_push`
   This will push commits to the trunk whenever they are created by `mix tcr.test` which you can run occasionally manually in another terminal window.

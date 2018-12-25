@@ -1,6 +1,10 @@
-# Tcr
+# Tcr (deprecated)
 
 Experiment in **Test && Commit || Revert**
+
+## DEPRECATED. Please move to:  
+* hex: https://hex.pm/packages/limbo
+* git: https://github.com/mwindholtz/limbo
 
 ## Installation
 
